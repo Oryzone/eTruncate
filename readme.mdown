@@ -58,7 +58,7 @@ Follows a table that contains a list of all the available options:
 		</tr>
 		<tr>
 			<td><b>buttonCode</b></td>
-			<td><code>'<span><a href="#"></a></span>'</code></td>
+			<td><code>'&lt;span&gt;&lt;a href="#"&gt;&lt;/a&gt;&lt;/span&gt;'</code></td>
 			<td>the html code used to create the show/hide button (the text will be placed inside the a tag)</td>
 		</tr>
 		<tr>
