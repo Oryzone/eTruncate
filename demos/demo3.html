@@ -1,0 +1,38 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>eTruncate demo 3</title>
+<style type="text/css">
+a img
+{
+	padding: 5px;
+}
+</style>
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.3/jquery.min.js"></script>
+<script type="text/javascript" src="../src/jquery.eTruncate.js"></script>
+<script type="text/javascript">
+	jQuery(function($){
+		$.getJSON("http://api.flickr.com/services/feeds/photos_public.gne?id=21272841@N05&format=json&jsoncallback=?",
+						function(data){
+					  		$("#photoContainer").html("");
+							$.each(data.items, function(i,item){
+					    		$("<img style=\"width:100px; height: 74px;\"/>").attr("src", item.media.m).appendTo("#photoContainer")
+					      		.wrap("<a href='" + item.link + "'></a>");
+					  		});
+
+							$("#photoContainer").eTruncate({
+								elements : "a:gt(4)"
+							});
+
+						});
+	});
+</script>
+</head>
+<body>
+	<h1>Loige's flickr photostream</h1>
+<div id="photoContainer">
+	Loading stream...
+</div>
+</body>
+</html>
