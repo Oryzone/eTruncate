@@ -1,0 +1,6 @@
+jQuery eTruncate
+================
+
+eTruncate is a jQuery plugin that easily allows you to hide/show some html elements like some paragraphs on long texts.
+
+Documentation, tests and samples will be provided soon!
