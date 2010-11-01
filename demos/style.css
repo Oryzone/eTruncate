@@ -1,0 +1,51 @@
+html, body
+{
+	margin: 0;
+	padding: 0;
+}
+
+.cleaner
+{
+	clear: both;
+}
+
+#header
+{
+	background: #ddd;
+	border-bottom: 1px solid #ccc;
+	color: #000;
+	margin: 0;
+	padding: 4px;
+	text-align: center;
+}
+
+#header span
+{
+	font-size: 14px;
+	line-height: 16px;
+}
+
+#header span.title
+{
+	font-weight: bold;
+	color: #000;
+}
+
+#header span.prev
+{
+	color: #aaa;
+	float: left;
+	margin-left: 20px;
+}
+
+#header span.next
+{
+	color: #aaa;
+	float: right;
+	margin-right: 20px;
+}
+
+#content
+{
+	padding: 20px;
+}

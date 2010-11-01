@@ -3,21 +3,24 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 <title>eTruncate demo 3</title>
+<link type="text/css" rel="stylesheet" href="style.css"/>
 <style type="text/css">
 a img
 {
-	padding: 5px;
+	padding: 5px 5px 0 5px;
 }
 </style>
 <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.3/jquery.min.js"></script>
 <script type="text/javascript" src="../src/jquery.eTruncate.js"></script>
 <script type="text/javascript">
+	// Retrieves a series of images from flickr and appends them within the div#photoContainer then
+	// it truncates all the images from the fourth to the last.
 	jQuery(function($){
-		$.getJSON("http://api.flickr.com/services/feeds/photos_public.gne?id=21272841@N05&format=json&jsoncallback=?",
+		$.getJSON("http://api.flickr.com/services/feeds/photos_public.gne?id=46796250@N07&format=json&jsoncallback=?",
 						function(data){
 					  		$("#photoContainer").html("");
 							$.each(data.items, function(i,item){
-					    		$("<img style=\"width:100px; height: 74px;\"/>").attr("src", item.media.m).appendTo("#photoContainer")
+					    		$("<img/>").attr("src", item.media.m).appendTo("#photoContainer")
 					      		.wrap("<a href='" + item.link + "'></a>");
 					  		});
 
@@ -30,9 +33,17 @@ a img
 </script>
 </head>
 <body>
-	<h1>Loige's flickr photostream</h1>
+	<div id="header">
+		<span class="prev"><a href="demo2.html">&lt; Previous demo</a></span>
+		<span class="title">jQuery eTruncate Demo #3</span>
+		<span class="next">Next Demo &gt;</span>
+		<div class="cleaner"></div>
+	</div>
+	<div id="content">
+	<h1><a href="http://www.flickr.com/photos/oryzone/">ORYZONE photostream</a></h1>
 <div id="photoContainer">
 	Loading stream...
 </div>
+	</div>
 </body>
 </html>
