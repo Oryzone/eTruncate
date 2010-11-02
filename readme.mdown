@@ -92,12 +92,12 @@ Follows a table that contains a list of all the available options:
 	
 Demos?
 ------
-You'll find some more commented demos on the [_demo_](demos) folder. Give them a look if you still want to see other ways to use this plugin.
+You'll find some more commented demos on the [_demo_](eTruncate/tree/master/demos) folder. Give them a look if you still want to see other ways to use this plugin.
 
 
 Tests?
 ------
-Qunit tests are provided on the [_test_](test) folder. The tests ran successfully on Safari and Firefox.
+Qunit tests are provided on the [_test_](eTruncate/tree/master/test) folder. The tests ran successfully on Safari and Firefox.
 
 
 What the hell! This is not english! This is "Macaroni English" !!!
