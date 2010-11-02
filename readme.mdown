@@ -92,12 +92,12 @@ Follows a table that contains a list of all the available options:
 	
 Demos?
 ------
-You'll find some more commented demos on the [_demo_](eTruncate/tree/master/demos) folder. Give them a look if you still want to see other ways to use this plugin.
+You'll find some more commented demos on the [_demos_](eTruncate/tree/master/demos) folder. Give them a look if you still want to see other ways to use this plugin.
 
 
-Tests?
+Compatibility & Tests?
 ------
-Qunit tests are provided on the [_test_](eTruncate/tree/master/test) folder. The tests ran successfully on Safari and Firefox.
+eTruncate has been developed for jQuery 1.4.3, but it should work also with older 1.3.* versions. It has been tested successfully on mac with Safari 5.0.2, Firefox .5, Chrome 7.0 and Opera 10.61. Qunit tests are provided on the [_test_](eTruncate/tree/master/test) folder. If you find some problems please open a new [issue](http://github.com/Oryzone/eTruncate/issues). Tnx!
 
 
 What the hell! This is not english! This is "Macaroni English" !!!
