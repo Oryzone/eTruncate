@@ -2,7 +2,9 @@
 <html>
 <head>
 	<title>QUnit Test Suite</title>
-	<link rel="stylesheet" href="../qunit/qunit.css" type="text/css" media="screen">
+	<link rel="stylesheet" href="qunit/qunit.css" type="text/css" media="screen">
+	<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.3/jquery.min.js"></script>
+	<script type="text/javascript" src="../src/jquery.eTruncate.js"></script>
 	<script type="text/javascript" src="qunit/qunit.js"></script>
 	<script type="text/javascript" src="test.js"></script>
 </head>
@@ -12,6 +14,21 @@
 	<div id="qunit-testrunner-toolbar"></div>
 	<h2 id="qunit-userAgent"></h2>
 	<ol id="qunit-tests"></ol>
-	<div id="qunit-fixture">test markup</div>
+	<div id="qunit-fixture">
+	</div>
+	
+	<div id="my-fixture" style="left:-10000px; position:absolute; top:-10000px;">
+		<div id="container">
+			<p>hi</p>
+			<p class="more">hi2</p>
+			<p class="more">hi3</p>
+		</div>
+		<div id="container2">
+			<p>hi</p>
+			<p class="hi">hi2</p>
+			<p class="hi">hi3</p>
+			<div id="btn"></div>
+		</div>
+	</div>
 </body>
 </html>
