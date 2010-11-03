@@ -96,8 +96,13 @@ You'll find some more commented demos on the [_demos_](eTruncate/tree/master/dem
 
 
 Compatibility & Tests?
-------
+----------------------
 eTruncate has been developed for jQuery 1.4.3, but it should work also with older 1.3.* versions. It has been tested successfully on mac with Safari 5.0.2, Firefox .5, Chrome 7.0 and Opera 10.61. Qunit tests are provided on the [_test_](eTruncate/tree/master/test) folder. If you find some problems please open a new [issue](http://github.com/Oryzone/eTruncate/issues). Tnx!
+
+
+Licensing
+---------
+Copyright ©2010 ORYZONE, released under MIT license.
 
 
 What the hell! This is not english! This is "Macaroni English" !!!
