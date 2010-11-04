@@ -1,0 +1,13 @@
+jQuery eTruncate changelog
+==========================
+
+v 1.1 (in progress)
+-------------------
+
+  - *Features*:	
+    - Added the ability to access to the eTruncate instance programmatically ( [issue #3](https://github.com/Oryzone/eTruncate/issues#issue/3) )
+
+v 1.0
+-----
+  
+  - starting release

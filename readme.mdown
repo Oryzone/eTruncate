@@ -89,6 +89,36 @@ Follows a table that contains a list of all the available options:
 	</tbody>
 </table>
 
+
+Accessing to the eTruncate object instance
+------------------------------------------
+After having initialized an eTruncate instance using a given selector you can access to the related eTruncate object whenever you want. Basically the plugin works by attaching the generated eTruncate instance to the related DOM element by using the common [jQuery .data() method](http://api.jquery.com/data/). So you have basically two ways to access to the object instance:
+  
+  1. By reading the DOM element data
+  2. By using an alternative plugin instantion
+
+Let's see a quick how-to. Suppose you've already instantiated eTruncate using the `$("#container")` selector:
+
+	$("#container").eTruncate();
+
+If you prefer the first method you can simple check the data contained within the `$("#container")` selector:
+
+	$("#container").data("eTruncate"); // jQuery 1.2.3+
+	
+or
+
+	$("#container").data().eTruncate; // only for jQuery 1.4+
+	
+If you would like to use the second method you must call the plugin function as if you want to instantiate it, but using a the special string parameter `"instance"`:
+
+	$("#container").eTruncate("instance");
+
+
+Working programmatically with the eTruncate instance
+----------------------------------------------------
+Once you got the eTruncate instance you can operate programmatically with it by accessing to all its public attributes and methods. For instance you can easily show, hide or toggle the connected DOM elements by calling respectively `hideElements()`, `showElements()` or `toggleElements()`.
+A more complete api documentation will be provided soon. 
+
 	
 Demos?
 ------
@@ -97,7 +127,7 @@ You'll find some more commented demos on the [_demos_](eTruncate/tree/master/dem
 
 Compatibility & Tests?
 ----------------------
-eTruncate has been developed for jQuery 1.4.3, but it should work also with older 1.3.* versions. It has been tested successfully on mac with Safari 5.0.2, Firefox .5, Chrome 7.0, Opera 10.61, Internet explorer (6, 7 and 8). Qunit tests are provided on the [_test_](eTruncate/tree/master/test) folder. If you find some problems please open a new [issue](http://github.com/Oryzone/eTruncate/issues). Tnx!
+eTruncate has been developed for jQuery 1.4.3. It has been tested successfully on mac with Safari 5.0, Firefox 3.5, Chrome 7.0, Opera 10.6, Internet explorer (6, 7 and 8). Qunit tests are provided on the [_test_](eTruncate/tree/master/test) folder. If you find some problems please open a new [issue](http://github.com/Oryzone/eTruncate/issues). Tnx!
 
 
 Licensing

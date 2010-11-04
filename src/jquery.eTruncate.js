@@ -18,7 +18,7 @@
 
         self.version = "1.0";
 
-        self.defaultOptions = {
+        var defaultOptions = {
             elements : ".more", // the selector that identifies the elements that will be hidden
             createButton : true, // a flag that indicates if a link button to show/hide the hidden elements should be created
             buttonContainer : null, // a selector that indicates where the show/hide button should be placed. If null the button will be appended after the each hidden element
@@ -30,8 +30,9 @@
             startStatus : "hidden" // the initial status of the exceding text (use "hidden" if you want to hide it at onLoad or use "show" otherwise)
         };
 
-        self.options = $.extend({}, self.defaultOptions, options);
+        self.options = $.extend({}, defaultOptions, options);
         self.container = container;
+		self.container.data("eTruncate", self);
 
         var init = function()
         {
@@ -112,7 +113,12 @@
 
     $.fn.eTruncate = function(options)
     {
-        return this.each(function(){
+        if(options === "instance" && $(this).data("eTruncate"))
+		{
+			return $(this).data("eTruncate");
+		}
+
+		return this.each(function(){
             new eTruncate($(this), options);
         });
     }
