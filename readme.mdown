@@ -109,7 +109,7 @@ or
 
 	$("#container").data().eTruncate; // only for jQuery 1.4+
 	
-If you would like to use the second method you must call the plugin function as if you want to instantiate it, but using a the special string parameter `"instance"`:
+If you would like to use the second method you must call the plugin function as if you want to instantiate it, but by using the special string parameter `"instance"`:
 
 	$("#container").eTruncate("instance");
 
