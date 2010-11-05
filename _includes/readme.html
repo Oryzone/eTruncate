@@ -1,0 +1,145 @@
+<h1>jQuery eTruncate</h1>
+
+<p>eTruncate is a <a href="http://jquery.com/" title="jQuery website">jQuery</a> plugin that easily allows you to hide/show some html elements like some paragraphs on long texts.
+It can be used as an easy way to improve user experience by hiding part of long unconfortable list elements and show them again with a click to provide more information only to those users who are really interested on reading your contents.</p>
+
+<h2>State of the art</h2>
+
+<p>eTruncate has been developed by <a href="amangano@oryzone.com">Andrea Mangano</a> and <a href="lmammino@oryzone.com">Luciano Mammino</a> at <a href="http://oryzone.com" title="ORYZONE's website">ORYZONE</a> for the <a href="http://oryzone.com" title="ORYZONE's website">ORYZONE website</a>. It has been used to hide part of some really long descriptions within their portfolio. ORYZONE want to share this plugin and make it open source because they truly believe that only by sharing our experiences we all can became better. So, please, don't hesitate to <a href="https://github.com/Oryzone/eTruncate/zipball/master">use</a> the plugin, discover <a href="https://github.com/Oryzone/eTruncate/issues">bugs</a> and provide useful <a href="https://github.com/Oryzone/eTruncate/issues">suggestions</a> to make this plugin better and better.</p>
+
+<h2>Usage</h2>
+
+<p>Like the most jQuery plugins the usage is very simple. You should just have a jQuery selector and call the specific plugin function. In this case you should code something like the following prototype:</p>
+
+<pre><code>$(SELECTOR).eTruncate(OPTIONS);
+</code></pre>
+
+<p>For example suppose you have a lot of paraghraps on the body of a web page and you want to show just the first one, hide the others and provide a button that allows you to show more/less paragraphs. You should do something like this:</p>
+
+<p>HTML markup:</p>
+
+<pre><code>&lt;body&gt;
+&lt;p&gt;Hi this is the paraghraph number 1&lt;/p&gt;
+&lt;p class="more"&gt;this is the second&lt;/p&gt;
+&lt;p class="more"&gt;and then follows the last one!&lt;/p&gt;
+&lt;/body&gt;
+</code></pre>
+
+<p>Javascript</p>
+
+<pre><code>$("body").eTruncate();
+</code></pre>
+
+<p>The <strong>SELECTOR</strong>, <code>"body"</code> in this case , is used to select a container (or a list of containers). The plugin will search inside each container for the elements to hide, hides them and creates a button to show them back again. By default it will search for all the elements with the <code>"more"</code> class placed inside the container. You can obviously customize the behaviour of the plugin by providing a structured options object.</p>
+
+<h2>Options</h2>
+
+<p>Follows a table that contains a list of all the available options:
+<table>
+<thead>
+<tr>
+<td>Option</td>
+<td>Default value</td>
+<td>Description</td>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><b>elements</b></td>
+<td><code>".more"</code></td>
+<td>the selector that identifies the elements that will be hidden</td>
+</tr>
+<tr>
+<td><b>createButton</b></td>
+<td><code>true</code></td>
+<td>a flag that indicates if a link button to show/hide the hidden elements should be created</td>
+</tr>
+<tr>
+<td><b>buttonContainer</b></td>
+<td><code>null</code></td>
+<td>a selector that indicates where the show/hide button should be placed. If null the button will be appended after the each hidden element</td>
+</tr>
+<tr>
+<td><b>buttonCode</b></td>
+<td><code>'&lt;span&gt;&lt;a href="#"&gt;&lt;/a&gt;&lt;/span&gt;'</code></td>
+<td>the html code used to create the show/hide button (the text will be placed inside the a tag)</td>
+</tr>
+<tr>
+<td><b>showText</b></td>
+<td><code>"More"</code></td>
+<td>the text on the button when used to show more text</td>
+</tr>
+<tr>
+<td><b>showClass</b></td>
+<td><code>"show"</code></td>
+<td>the class attached to the button when it has to show more text</td>
+</tr>
+<tr>
+<td><b>hideText</b></td>
+<td><code>"Less"</code></td>
+<td>the text on the button when used to hide text</td>
+</tr>
+<tr>
+<td><b>hideClass</b></td>
+<td><code>"hide"</code></td>
+<td>the class attached to the button when it has to hide text</td>
+</tr>
+<tr>
+<td><b>startStatus</b></td>
+<td><code>"hidden"</code></td>
+<td>the initial status of the exceding text (use "hidden" if you want to hide it at onLoad or use "show" otherwise)</td>
+</tr>
+</tbody>
+</table></p>
+
+<h2>Accessing to the eTruncate object instance</h2>
+
+<p>After having initialized an eTruncate instance using a given selector you can access to the related eTruncate object whenever you want. Basically the plugin works by attaching the generated eTruncate instance to the related DOM element by using the common <a href="http://api.jquery.com/data/">jQuery .data() method</a>. So you have basically two ways to access to the object instance:</p>
+
+<ol>
+<li>By reading the DOM element data</li>
+<li>By using an alternative plugin instantion</li>
+</ol>
+
+<p>Let's see a quick how-to. Suppose you've already instantiated eTruncate using the <code>$("#container")</code> selector:</p>
+
+<pre><code>$("#container").eTruncate();
+</code></pre>
+
+<p>If you prefer the first method you can simple check the data contained within the <code>$("#container")</code> selector:</p>
+
+<pre><code>$("#container").data("eTruncate"); // jQuery 1.2.3+
+</code></pre>
+
+<p>or</p>
+
+<pre><code>$("#container").data().eTruncate; // only for jQuery 1.4+
+</code></pre>
+
+<p>If you would like to use the second method you must call the plugin function as if you want to instantiate it, but by using the special string parameter <code>"instance"</code>:</p>
+
+<pre><code>$("#container").eTruncate("instance");
+</code></pre>
+
+<h2>Working programmatically with the eTruncate instance</h2>
+
+<p>Once you got the eTruncate instance you can operate programmatically with it by accessing to all its public attributes and methods. For instance you can easily show, hide or toggle the connected DOM elements by calling respectively <code>hideElements()</code>, <code>showElements()</code> or <code>toggleElements()</code>.
+A complete api documentation is provided into the <a href="https://github.com/Oryzone/eTruncate/tree/master/docs/api"><em>docs/api</em></a> folder. </p>
+
+<h2>Demos?</h2>
+
+<p>You'll find some more commented demos on the <a href="https://github.com/Oryzone/eTruncate/tree/master/demos/"><em>demos</em></a> folder. Give them a look if you still want to see other ways to use this plugin.</p>
+
+<h2>Compatibility &amp; Tests?</h2>
+
+<p>eTruncate has been developed for jQuery 1.4.3. It has been tested successfully on mac with Safari 5.0, Firefox 3.5, Chrome 7.0, Opera 10.6, Internet explorer (6, 7 and 8). Qunit tests are provided on the <a href="https://github.com/Oryzone/eTruncate/tree/master/test/"><em>test</em></a> folder. If you find some problems please open a new <a href="http://github.com/Oryzone/eTruncate/issues">issue</a>. Tnx!</p>
+
+<h2>Licensing</h2>
+
+<p>Copyright ©2010 <a href="http://oryzone.com" title="ORYZONE's website">ORYZONE</a>, released under <a href="http://en.wikipedia.org/wiki/MIT_License">MIT license</a>.</p>
+
+<h2>What the hell! This is not english! This is "Macaroni English" !!!</h2>
+
+<p>We, the developers, are both Italian guys. Our english knowledge is just "scolastic", so our english is really far from perfection. Please be quite if this documents is not correct. We just hope that it's clear enough! If your english is better than ours (surely it is), please feel free to send us some suggestion to improve the whole plugin documentation: you'll be officially rewarded with a beer (maybe a virtual one, but that's just a detail :P).</p>
+
+<p><strong>Thankyou for being interested on this project ! ;)</strong></p>

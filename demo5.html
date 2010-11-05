@@ -1,0 +1,70 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>eTruncate demo 5</title>
+<link type="text/css" rel="stylesheet" href="css/style_demo.css"/>
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.3/jquery.min.js"></script>
+<script type="text/javascript" src="https://github.com/Oryzone/eTruncate/raw/master/src/jquery.eTruncate.js"></script>
+<script type="text/javascript">
+	jQuery(function($){
+		//hides all the paragraphs tagged with the class more within the div#content, also uses "Read more..." as text for the button
+		$("#content").eTruncate({"showText" : "Read more..."});
+		
+		//makes all the ".execute" elements to execute the code related to them
+		$(".execute").click(function(){
+			eval($(this).prev("code").html());
+			return false;
+		});
+	});
+</script>
+</head>
+<body>
+	<div id="header">
+		<span class="prev"><a href="demo4.html">&lt; Previous demo</a></span>
+		<span class="title">jQuery eTruncate Demo #5</span>
+		<span class="next">Next Demo &gt;</span>
+		<div class="cleaner"></div>
+	</div>
+	<div id="programmatic_box">
+		
+		<div id="initialization_info">
+			<p>eTruncate has been initialized with the following code: <code>$("#content").eTruncate({"showText" : "Read more..."});</code></p>
+		</div>
+		
+		<ol class="samples">
+		<li> Show the current plugin version:<br/>
+			<code>alert($("#content").eTruncate("instance").version);</code> <a class="execute" href="#">Execute</a>
+		</li>
+		<li> Show the current plugin status:<br/>
+			<code>alert($("#content").eTruncate("instance").status);</code> <a class="execute" href="#">Execute</a>
+		</li>
+		<li>
+			Show the connected elements:<br/>
+			<code>$("#content").eTruncate("instance").showElements();</code> <a class="execute" href="#">Execute</a>
+		</li>
+		<li> Hide the connected elements:<br/>
+			<code>$("#content").eTruncate("instance").hideElements();</code> <a class="execute" href="#">Execute</a>
+		</li>
+		<li> Toggle the connected elements:<br/>
+			<code>$("#content").eTruncate("instance").toggleElements();</code> <a class="execute" href="#">Execute</a>
+		</li>
+		<li> Creates a border around the instance container:<br/>
+			<code>$("#content").eTruncate("instance").container.css("border", "2px solid red");</code> <a class="execute" href="#">Execute</a>
+		</li>
+		</ol>
+	</div>
+	<div id="content">
+	<h1>Herman Melville - Moby Dick</h1>
+	<p>But being in a great hurry to resume scolding the man in the purple Shirt, who was waiting for it in the entry, and seeming to hear nothing but the word "clam," Mrs. Hussey hurried towards an open door leading to the kitchen, and bawling out "clam for two," disappeared.</p>
+
+	<p>"Queequeg," said I, "do you think that we can make out a supper for us both on one clam?"</p>
+
+	<p class="more">However, a warm savory steam from the kitchen served to belie the apparently cheerless prospect before us. But when that smoking chowder came in, the mystery was delightfully explained. Oh, sweet friends! hearken to me. It was made of small juicy clams, scarcely bigger than hazel nuts, mixed with pounded ship biscuit, and salted pork cut up into little flakes; the whole enriched with butter, and plentifully seasoned with pepper and salt. Our appetites being sharpened by the frosty voyage, and in particular, Queequeg seeing his favourite fishing food before him, and the chowder being surpassingly excellent, we despatched it with great expedition: when leaning back a moment and bethinking me of Mrs. Hussey's clam and cod announcement, I thought I would try a little experiment. Stepping to the kitchen door, I uttered the word "cod" with great emphasis, and resumed my seat. In a few moments the savoury steam came forth again, but with a different flavor, and in good time a fine cod-chowder was placed before us.</p>
+
+	<p class="more">We resumed business; and while plying our spoons in the bowl, thinks I to myself, I wonder now if this here has any effect on the head? What's that stultifying saying about chowder-headed people? "But look, Queequeg, ain't that a live eel in your bowl? Where's your harpoon?"</p>
+
+	<p class="more">...</p>
+	</div>
+</body>
+</html>

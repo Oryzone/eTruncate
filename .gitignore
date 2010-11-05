@@ -1,0 +1,3 @@
+# ignoring _site folder to ignore jekyll compiled files #
+#########################################################
+_site
