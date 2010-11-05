@@ -1,11 +1,11 @@
 jQuery eTruncate
 ================
-eTruncate is a jQuery plugin that easily allows you to hide/show some html elements like some paragraphs on long texts.
+eTruncate is a [jQuery][jquery] plugin that easily allows you to hide/show some html elements like some paragraphs on long texts.
 It can be used as an easy way to improve user experience by hiding part of long unconfortable list elements and show them again with a click to provide more information only to those users who are really interested on reading your contents.
 
 State of the art
 ----------------
-eTruncate has been developed by [Andrea Mangano](amangano@oryzone.com) and [Luciano Mammino](lmammino@oryzone.com) at [ORYZONE][oryzone] for the [ORYZONE website][oryzone]. It has been used to hide part of some really long descriptions within their portfolio. ORYZONE want to share this plugin and make it open source because they truly believe that only by sharing our experiences we all can became better. So, please, don't hesitate to use the plugin, discover bugs and provide useful suggestions to make this plugin better and better.
+eTruncate has been developed by [Andrea Mangano](amangano@oryzone.com) and [Luciano Mammino](lmammino@oryzone.com) at [ORYZONE][oryzone] for the [ORYZONE website][oryzone]. It has been used to hide part of some really long descriptions within their portfolio. ORYZONE want to share this plugin and make it open source because they truly believe that only by sharing our experiences we all can became better. So, please, don't hesitate to [use](https://github.com/Oryzone/eTruncate/zipball/master) the plugin, discover [bugs](https://github.com/Oryzone/eTruncate/issues) and provide useful [suggestions](https://github.com/Oryzone/eTruncate/issues) to make this plugin better and better.
 
 Usage
 -----
@@ -139,7 +139,9 @@ What the hell! This is not english! This is "Macaroni English" !!!
 ------------------------------------------------------------------
 We, the developers, are both Italian guys. Our english knowledge is just "scolastic", so our english is really far from perfection. Please be quite if this documents is not correct. We just hope that it's clear enough! If your english is better than ours (surely it is), please feel free to send us some suggestion to improve the whole plugin documentation: you'll be officially rewarded with a beer (maybe a virtual one, but that's just a detail :P).
 
+
 **Thankyou for being interested on this project ! ;)**
 
 
 [oryzone]: http://oryzone.com "ORYZONE's website"
+[jquery]: http://jquery.com/ "jQuery website"
