@@ -1,0 +1,50 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>eTruncate demo 2</title>
+<link type="text/css" rel="stylesheet" href="style.css"/>
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.3/jquery.min.js"></script>
+<script type="text/javascript" src="../src/jquery.eTruncate.js"></script>
+<script type="text/javascript">
+	jQuery(function($){
+		//creates a container for the eTruncate button
+		$("#content").append($('<p id="buttonContainer"></p>'));
+		
+		//initializes eTruncate to truncate all the elements with the class "more" within the div#playlist
+		//it also places the button inside the element with the id "buttonContainer" (created dinamically before)
+		//and changes the default button labels
+		$("#playlist").eTruncate({
+			buttonContainer: "#buttonContainer",
+			showText: "See all the tracks...",
+			hideText: "less tracks!"
+		});
+	});
+</script>
+</head>
+<body>
+	<div id="header">
+		<span class="prev"><a href="demo1.html">&lt; Previous demo</a></span>
+		<span class="title">jQuery eTruncate Demo #2</span>
+		<span class="next"><a href="demo3.html">Next Demo &gt;</a></span>
+		<div class="cleaner"></div>
+	</div>
+	<div id="content">
+	<h1>The Goo Goo Dolls - Let Love in</h1>
+	<img width="300" height="300" src="http://ecx.images-amazon.com/images/I/412N-gpts6L.jpg" alt="Album cover">
+	<ol id="playlist">
+		<li>Stay With You</li>
+		<li>Let Love In</li>
+		<li class="more">Feel The Silence</li>
+		<li class="more">Better Days</li>
+		<li class="more">Without You Here</li>
+		<li class="more">Listen</li>
+		<li class="more">Give A Little Bit</li>
+		<li class="more">Can't Let It Go</li>
+		<li class="more">We'll Be Here (When You're Gone)</li>
+		<li class="more">Strange Love</li>
+		<li class="more">Become</li>
+	</ol>
+	</div>	
+</body>
+</html>
