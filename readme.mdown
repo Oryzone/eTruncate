@@ -117,17 +117,17 @@ If you would like to use the second method you must call the plugin function as 
 Working programmatically with the eTruncate instance
 ----------------------------------------------------
 Once you got the eTruncate instance you can operate programmatically with it by accessing to all its public attributes and methods. For instance you can easily show, hide or toggle the connected DOM elements by calling respectively `hideElements()`, `showElements()` or `toggleElements()`.
-A more complete api documentation will be provided soon. 
+A complete api documentation is provided into the [_docs/api_](https://github.com/Oryzone/eTruncate/tree/master/docs/api) folder. 
 
 	
 Demos?
 ------
-You'll find some more commented demos on the [_demos_](eTruncate/tree/master/demos) folder. Give them a look if you still want to see other ways to use this plugin.
+You'll find some more commented demos on the [_demos_](https://github.com/Oryzone/eTruncate/tree/master/demos/) folder. Give them a look if you still want to see other ways to use this plugin.
 
 
 Compatibility & Tests?
 ----------------------
-eTruncate has been developed for jQuery 1.4.3. It has been tested successfully on mac with Safari 5.0, Firefox 3.5, Chrome 7.0, Opera 10.6, Internet explorer (6, 7 and 8). Qunit tests are provided on the [_test_](eTruncate/tree/master/test) folder. If you find some problems please open a new [issue](http://github.com/Oryzone/eTruncate/issues). Tnx!
+eTruncate has been developed for jQuery 1.4.3. It has been tested successfully on mac with Safari 5.0, Firefox 3.5, Chrome 7.0, Opera 10.6, Internet explorer (6, 7 and 8). Qunit tests are provided on the [_test_](https://github.com/Oryzone/eTruncate/tree/master/test/) folder. If you find some problems please open a new [issue](http://github.com/Oryzone/eTruncate/issues). Tnx!
 
 
 Licensing
