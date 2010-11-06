@@ -4,6 +4,47 @@ title: Home
 ---
 <div id="main">
 	<div id="main_inner">
+		<div id="quickDemo">
+			<a href="#" id="quickDemo_hide">hide</a>
+			<h1>Quick demo</h1>
+			<h2><a href="http://twitter.com/oryzone">@oryzone</a> followers on Twitter</h2>
+			<div id="quickDemo_content">
+				... Loading followers
+			</div>
+			<div id="quickDemo_button">
+				
+			</div>
+			<script>
+				jQuery(function($){
+					
+					$("#quickDemo_hide").click(function(){
+						$("#quickDemo").slideUp("slow");
+						return false;
+					});
+					
+					$.getJSON("http://api.twitter.com/1/statuses/followers.json?screen_name=oryzone&callback=?", function(data){
+						
+						$("#quickDemo_content").html("");
+						
+						var cls = "";
+						$(data).each(function(index){
+								
+							$("#quickDemo_content").append(
+$('<span class="follower"><a href="http://twitter.com/' + this.screen_name + '" title="' + this.screen_name + '\'s twitter profile"><img width="48" height="48" src="'+ this.profile_image_url +'"/></a></span>'));
+						});
+						
+						var totalFollowers = data.length;
+						var visibleFollowers = data.length - 14;
+						$("#quickDemo_content").eTruncate({
+							"elements" : "span.follower:gt(13)",
+							"showText" : "...Show all the " + totalFollowers + " followers",
+							"hideText" : "show only the last 14 followers",
+							"buttonContainer" : "#quickDemo_button"
+						});
+					})
+				});
+			</script>
+		</div>
 		<article>
 			{% include readme.html %}
 		</article>

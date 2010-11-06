@@ -223,6 +223,48 @@ button {  width: auto; overflow: visible; }
  /* Primary Styles
     Author: Mammino Luciano
  */
+code
+{
+	background: #fefff0;
+	border: 1px solid #f9ffa1;
+}
+
+pre code
+{
+	border: 1px solid transparent;
+}
+
+pre
+{
+	background: #feffea;
+	border: 1px solid #eee;
+	margin: 20px 0 20px 10px;
+	padding: 10px;
+}
+
+table
+{
+	margin: 20px 10px 20px 10px;
+}
+
+table thead tr td
+{
+	border-bottom: 2px solid #f4f4f4;
+	color: #215e91;
+	font-weight: bold;
+	padding: 0 0 10px 0;
+}
+
+table tbody tr td
+{
+	border-bottom: 1px dotted #f4f4f4;
+	padding: 4px;
+}
+
+table tbody tr:first-of-type td
+{
+	padding-top: 10px;
+}
 
 
 #header
@@ -356,14 +398,15 @@ article h2
 	color: #215e91;
 	font-family: 'Cantarell', arial, serif;
 	font-size: 22px;
-	margin: 20px 0 5px 0;
-	padding: 10px 0 0 0;
+	margin: 40px 0 5px 0;
+	padding: 20px 0 0 0;
 	text-shadow: rgba(0,0,0,0.5) -1px 0, rgba(0,0,0,0.2) 0 -1px, rgba(255,255,255,0.4) 0 1px, rgba(0,0,0,0.2) -1px -1px;
 }
 
 article h2:first-of-type
 {
 	border-top: none;
+	margin-top: 20px;
 }
 
 article p
@@ -403,7 +446,55 @@ footer
 
 
 
+#quickDemo
+{
+	background: #fefff0;
+	border: 1px solid #ebecdc;
+	margin: 20px 0 20px 0;
+	padding: 10px;
+}
 
+#quickDemo h1
+{
+	font-size: 20px;
+	line-height: 140%;
+}
+
+#quickDemo h2
+{
+	margin: 10px 0 10px 0;
+}
+
+#quickDemo_hide
+{
+	display: block;
+	float: right;
+	font-weight: bold;
+	text-decoration: none;
+}
+
+#quickDemo_content
+{
+	margin: 20px 0 20px 0;
+}
+
+#quickDemo span.follower
+{
+	padding: 4px;
+}
+
+#quickDemo span.follower img
+{
+	background: #fff;
+	border: 1px solid #ccc;
+	padding: 4px;
+}
+
+#quickDemo span.follower a:hover img
+{
+	background: #215e91;
+	border-color: #aaa;
+}
 
 
 
