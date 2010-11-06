@@ -26,22 +26,22 @@
 	 */
 	/**
 	 *  Constructor: eTruncate
-	 *  Creates a new eTruncate instance
+	 *  Constructor: creates a new eTruncate instance
 	 *  
 	 *  Parameters:
-	 *  - container - {jQuery} a jQuery DOM element that contains the elements you want to show/hide
-	 *  - options - {Object} an array used to configure the plugin instance
+	 *  - *container* - {jQuery} a jQuery DOM element that contains the elements you want to show/hide
+	 *  - *options* - {Object} an array used to configure the plugin instance
 	 *  
 	 *  The options object can specify the following attributes (the default value is given on parenthesis):
-	 *  - elements - {String} (".more") the selector that identifies the elements that will be hidden
-     *  - createButton - {boolean} (true) a flag that indicates if a link button to show/hide the hidden elements should be created
-     *  - buttonContainer - {jQuery|String} (null) a selector that indicates where the show/hide button should be placed. If null the button will be appended after the each hidden element
-     *  - buttonCode - {String} ('<span><a href="#"></a></span>') the html code used to create the show/hide button (the text will be placed inside the a tag)
-     *  - showText - {String} ("More") the text on the button when used to show more text
-     *  - showClass - {String} ("show") the class attached to the button when it has to show more text
-     *  - hideText - {String} ("Less") the text on the button when used to hide text
-     *  - hideClass - {String} ("hide") the class attached to the button when it has to hide text
-     *  - startStatus - {String} ("hidden") the initial status of the exceding text (use "hidden" if you want to hide it at onLoad or use "show" otherwise)
+	 *  - *elements* - {String} (".more") the selector that identifies the elements that will be hidden
+     *  - *createButton* - {boolean} (true) a flag that indicates if a link button to show/hide the hidden elements should be created
+     *  - *buttonContainer* - {jQuery|String} (null) a selector that indicates where the show/hide button should be placed. If null the button will be appended after the each hidden element
+     *  - *buttonCode* - {String} ('<span><a href="#"></a></span>') the html code used to create the show/hide button (the text will be placed inside the a tag)
+     *  - *showText* - {String} ("More") the text on the button when used to show more text
+     *  - *showClass* - {String} ("show") the class attached to the button when it has to show more text
+     *  - *hideText* - {String} ("Less") the text on the button when used to hide text
+     *  - *hideClass* - {String} ("hide") the class attached to the button when it has to hide text
+     *  - *startStatus* - {String} ("hidden") the initial status of the exceding text (use "hidden" if you want to hide it at onLoad or use "show" otherwise)
 	 */
     var eTruncate = function(container, options)
     {
@@ -188,19 +188,23 @@
     }
 
 	/**
-	*  Function: .eTruncate
+	 *  Class: jQuery.fn
+	 *  Extensions provided to the jQuery object to follow the default plugin development conventions
+	 */
+	/**
+	*  Function: eTruncate
 	*  Method to instantiate the plugin on one or more elements selected with a jQuery selector.
 	*  Should be called as follows:
 	*  
 	*  > $("selector").eTruncate(options);
 	*  
-	*  Where _selector_ stands for the selectors for the element(s) that contains the elements you
-	*  want to hide/show. _Options_ is an object that can be used to provide a custom configuration
+	*  Where *selector* stands for the selectors for the element(s) that contains the elements you
+	*  want to hide/show. *Options* is an object that can be used to provide a custom configuration
 	*  for the plugin. See the available options on the <eTruncate> constructor.
 	*  
 	*  You can also use this method on elements with wich you've already instantiated eTruncate to 
 	*  retrieve the connected eTruncate object.
-	*  To do so you should just pass the string _`instance`_ as the _options_ object:
+	*  To do so you should just pass the string *`instance`* as the *options* object:
 	*  
 	*  > $("selector").eTruncate("instance");
 	*/
