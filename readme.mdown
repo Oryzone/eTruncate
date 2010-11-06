@@ -7,6 +7,10 @@ State of the art
 ----------------
 eTruncate has been developed by [Andrea Mangano](amangano@oryzone.com) and [Luciano Mammino](lmammino@oryzone.com) at [ORYZONE][oryzone] for the [ORYZONE website][oryzone]. It has been used to hide part of some really long descriptions within their portfolio. ORYZONE want to share this plugin and make it open source because they truly believe that only by sharing our experiences we all can became better. So, please, don't hesitate to [use](https://github.com/Oryzone/eTruncate/zipball/master) the plugin, discover [bugs](https://github.com/Oryzone/eTruncate/issues) and provide useful [suggestions](https://github.com/Oryzone/eTruncate/issues) to make this plugin better and better.
 
+Do you need to see before you believe?
+--------------------------------------
+Check out the [demo page][demos]!
+
 Usage
 -----
 Like the most jQuery plugins the usage is very simple. You should just have a jQuery selector and call the specific plugin function. In this case you should code something like the following prototype:
@@ -117,7 +121,7 @@ If you would like to use the second method you must call the plugin function as 
 Working programmatically with the eTruncate instance
 ----------------------------------------------------
 Once you got the eTruncate instance you can operate programmatically with it by accessing to all its public attributes and methods. For instance you can easily show, hide or toggle the connected DOM elements by calling respectively `hideElements()`, `showElements()` or `toggleElements()`.
-A complete api documentation is provided into the [_docs/api_](https://github.com/Oryzone/eTruncate/tree/master/docs/api) folder. 
+If you want to dive further read the complete [api documentation][api]. 
 
 	
 Demos?
@@ -146,3 +150,4 @@ We, the developers, are both Italian guys. Our english knowledge is just "scolas
 [oryzone]: http://oryzone.com "ORYZONE's website"
 [jquery]: http://jquery.com/ "jQuery website"
 [demos]: http://oryzone.github.com/eTruncate/demos.html
+[api]: http://oryzone.github.com/eTruncate/api.html
