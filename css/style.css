@@ -597,13 +597,24 @@ footer
 	margin-bottom: 10px;
 }
 
-
-
-.api div#MainTopic
+.api .CClass
 {
 	background: #fcfcfc;
 	border: 1px dotted #ccc;
 	padding: 20px;
+}
+
+.api .CClass h2,
+.api .CClass h1
+{
+	margin: 0 0 20px 0;
+	padding: 0;
+}
+
+.api .CClass .Summary .STitle
+{
+	margin: 20px 0 0 0;
+	padding: 0;
 }
 
 .api .STitle
@@ -611,6 +622,18 @@ footer
 	
 	font-size: 18px;
 	font-weight: bold;
+}
+
+.api .SClass td
+{
+	padding-top: 20px;
+}
+
+.api .SMain .SEntry,
+.api .SClass .SEntry
+{
+	font-weight: bold;
+	font-size: 16px;
 }
 
 .api tr.SIndent1 td
@@ -686,6 +709,11 @@ footer
 {
 	color: #16095b;
 	font-family: 'Lucida Console', Monaco, monospace;
+}
+
+.api .CClass
+{
+	padding-top: 40px;
 }
 
 
