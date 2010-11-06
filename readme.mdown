@@ -122,7 +122,7 @@ A complete api documentation is provided into the [_docs/api_](https://github.co
 	
 Demos?
 ------
-You'll find some more commented demos on the [_demos_](https://github.com/Oryzone/eTruncate/tree/master/demos/) folder. Give them a look if you still want to see other ways to use this plugin.
+You'll find some more commented demos on the [_demos_][demos] folder. Give them a look if you still want to see other ways to use this plugin.
 
 
 Compatibility & Tests?
@@ -145,3 +145,4 @@ We, the developers, are both Italian guys. Our english knowledge is just "scolas
 
 [oryzone]: http://oryzone.com "ORYZONE's website"
 [jquery]: http://jquery.com/ "jQuery website"
+[demos]: http://oryzone.github.com/eTruncate/demos.html
