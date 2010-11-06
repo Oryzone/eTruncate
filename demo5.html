@@ -1,11 +1,7 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml">
-<head>
-<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-<title>eTruncate demo 5</title>
-<link type="text/css" rel="stylesheet" href="css/style_demo.css"/>
-<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.3/jquery.min.js"></script>
-<script type="text/javascript" src="https://github.com/Oryzone/eTruncate/raw/master/src/jquery.eTruncate.js"></script>
+---
+layout: layout
+title: Demos
+---
 <script type="text/javascript">
 	jQuery(function($){
 		//hides all the paragraphs tagged with the class more within the div#content, also uses "Read more..." as text for the button
@@ -18,18 +14,18 @@
 		});
 	});
 </script>
-</head>
-<body>
-	<div id="header">
-		<span class="prev"><a href="demo4.html">&lt; Previous demo</a></span>
-		<span class="title">jQuery eTruncate Demo #5</span>
-		<span class="next">Next Demo &gt;</span>
-		<div class="cleaner"></div>
-	</div>
+<div id="main" class="demos">
+	<div id="main_inner">
+
+		{% assign demoNumber = 5 %}
+		{% assign demoPrev = "demo4.html" %}
+		{% include demo_header.html %}
+
+		<article>
 	<div id="programmatic_box">
 		
 		<div id="initialization_info">
-			<p>eTruncate has been initialized with the following code: <code>$("#content").eTruncate({"showText" : "Read more..."});</code></p>
+			<p>eTruncate has been initialized with the following code:<br/> <code>$("#content").eTruncate({"showText" : "Read more..."});</code></p>
 		</div>
 		
 		<ol class="samples">
@@ -65,6 +61,7 @@
 	<p class="more">We resumed business; and while plying our spoons in the bowl, thinks I to myself, I wonder now if this here has any effect on the head? What's that stultifying saying about chowder-headed people? "But look, Queequeg, ain't that a live eel in your bowl? Where's your harpoon?"</p>
 
 	<p class="more">...</p>
-	</div>
-</body>
-</html>
+</div>
+</article>
+</div>
+</div>

@@ -223,6 +223,28 @@ button {  width: auto; overflow: visible; }
  /* Primary Styles
     Author: Mammino Luciano
  */
+
+.cleaner
+{
+	clear: both;
+}
+
+body
+{
+	background-color: #f4f4f4;
+	background-image: url(../images/bg.jpg);
+}
+
+#main
+{
+	background-color: #ffffff;
+}
+
+#main_inner
+{
+	padding: 20px 0 0 0;
+}
+
 code
 {
 	background: #fefff0;
@@ -269,8 +291,6 @@ table tbody tr:first-of-type td
 
 #header
 {
-	background-color: #f4f4f4;
-	background-image: url(../images/bg.jpg);
 	border-bottom: 3px solid #f0f0f0;
 }
 
@@ -352,9 +372,13 @@ header h2 a
 	background: -moz-linear-gradient(top,  #cccccc,  #9f9f9f);
 	filter:  progid:DXImageTransform.Microsoft.gradient(startColorstr='#cccccc', endColorstr='#9f9f9f');
 }
-.blue, .grey, .blue:visited, .grey:visited, .blue:hover, .grey:hover
+.blue, .blue:visited, .blue:hover
 {
 	color: #ffffff;
+}
+.grey, .grey:visited, .grey:hover
+{
+	color: #000000;
 }
 .blue:hover
 {
@@ -381,6 +405,10 @@ nav ul li a
 	text-decoration: none;
 }
 
+nav ul li a.active
+{
+	color: navy;
+}
 
 article
 {
@@ -388,6 +416,13 @@ article
 }
 
 article h1
+{
+	font-size: 22px;
+	line-height: 125%;
+	margin: 15px 0 10px 0;
+}
+
+.home article h1
 {
 	display: none;
 }
@@ -415,7 +450,7 @@ article p
 	line-height: 140%;
 }
 
-article p:first-of-type
+.home article p:first-of-type
 {
 	background: #f2f2f2;
 	background-image: url(../images/quote.png);
@@ -430,7 +465,6 @@ article p:first-of-type
 footer
 {
 	border-top: 4px solid #215e91;
-	background: url(../images/bg.jpg);
 }
 
 #footer_inner
@@ -450,7 +484,7 @@ footer
 {
 	background: #fefff0;
 	border: 1px solid #ebecdc;
-	margin: 20px 0 20px 0;
+	margin: 0 0 20px 0;
 	padding: 10px;
 }
 
@@ -496,6 +530,163 @@ footer
 	border-color: #aaa;
 }
 
+
+.demos_list
+{
+	margin: 20px 0 20px 20px;
+	padding: 0 0 0 20px;
+}
+
+.demos_list li
+{
+	font-size: 18px;
+	line-height: 140%;
+	margin: 0 0 20px 0;
+}
+
+.demos_list li a
+{
+	font-weight: bold;
+	font-size: 20px;
+}
+
+#demo_header
+{
+	border-bottom: 1px dotted #ccc;
+	color: #ccc;
+	padding: 10px 0 10px 0;
+	text-align: center;
+}
+
+#demo_header .prev
+{
+	float: left;
+}
+
+#demo_header .title
+{
+	color: #444;
+	font-weight: bold;
+}
+
+#demo_header .next
+{
+	float: right;
+}
+
+#programmatic_box
+{
+	border: 1px solid #eee;
+	padding: 10px;
+}
+
+#initialization_info
+{
+	background: #fcfcfc;
+	padding: 20px;
+}
+
+#programmatic_box .samples
+{
+	padding: 20px;
+}
+
+#programmatic_box .samples li
+{
+	line-height: 140%;
+	margin-bottom: 10px;
+}
+
+
+
+.api div#MainTopic
+{
+	background: #fcfcfc;
+	border: 1px dotted #ccc;
+	padding: 20px;
+}
+
+.api .STitle
+{
+	
+	font-size: 18px;
+	font-weight: bold;
+}
+
+.api tr.SIndent1 td
+{
+	padding-left: 20px;
+}
+
+.api tr.SIndent2 td
+{
+	border-bottom-color: #ccc;
+	padding-left: 40px;
+}
+
+.api tr.SGroup td.SEntry
+{
+	font-weight: bold;
+	padding-top: 10px;
+}
+
+.api div.CGroup
+{
+	margin: 20px 0 0 0;
+}
+
+.api div.CTopic .CBody
+{
+	border-bottom: 1px dotted #ddd;
+	padding: 0 0 20px 0;
+}
+
+.api .CGroup .CTopic h3
+{
+	border-bottom: 2px solid #ddd;
+	font-size: 26px;
+	line-height: 125%;
+	margin: 20px 0 2px 0;
+	padding: 5px;
+}
+
+.api .CFunction .CTopic .CTitle,
+.api .CVariable .CTopic .CTitle
+{
+	font-size: 20px;
+	line-height: 125%;
+	margin: 20px 0 2px 0;
+}
+
+.api .CFunction,
+.api .CVariable
+{
+	padding: 0 0 0 30px;
+}
+
+.api blockquote
+{
+	margin: 0;
+	padding: 0;
+}
+
+.api h4
+{
+	font-size: 16px;
+	line-height: 140%;
+	margin-top: 10px;
+}
+
+.api ul li
+{
+	line-height: 140%;
+}
+
+.prettyprint
+{
+	color: #16095b;
+	font-family: 'Lucida Console', Monaco, monospace;
+}
 
 
 /*

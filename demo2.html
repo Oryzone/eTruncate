@@ -1,11 +1,7 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml">
-<head>
-<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-<title>eTruncate demo 2</title>
-<link type="text/css" rel="stylesheet" href="css/style_demo.css"/>
-<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.3/jquery.min.js"></script>
-<script type="text/javascript" src="https://github.com/Oryzone/eTruncate/raw/master/src/jquery.eTruncate.js"></script>
+---
+layout: layout
+title: Demos
+---
 <script type="text/javascript">
 	jQuery(function($){
 		//creates a container for the eTruncate button
@@ -21,14 +17,15 @@
 		});
 	});
 </script>
-</head>
-<body>
-	<div id="header">
-		<span class="prev"><a href="demo1.html">&lt; Previous demo</a></span>
-		<span class="title">jQuery eTruncate Demo #2</span>
-		<span class="next"><a href="demo3.html">Next Demo &gt;</a></span>
-		<div class="cleaner"></div>
-	</div>
+<div id="main" class="demos">
+	<div id="main_inner">
+	
+	{% assign demoNumber = 2 %}
+	{% assign demoPrev = "demo1.html" %}
+	{% assign demoNext = "demo3.html" %}
+	{% include demo_header.html %}
+	
+	<article>
 	<div id="content">
 	<h1>The Goo Goo Dolls - Let Love in</h1>
 	<img width="300" height="300" src="http://ecx.images-amazon.com/images/I/412N-gpts6L.jpg" alt="Album cover">
@@ -45,6 +42,7 @@
 		<li class="more">Strange Love</li>
 		<li class="more">Become</li>
 	</ol>
-	</div>	
-</body>
-</html>
+</div>
+</article>
+</div>
+</div>

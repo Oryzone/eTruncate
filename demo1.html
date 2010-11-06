@@ -1,25 +1,20 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml">
-<head>
-<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-<title>eTruncate demo 1</title>
-<link type="text/css" rel="stylesheet" href="css/style_demo.css"/>
-<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.3/jquery.min.js"></script>
-<script type="text/javascript" src="https://github.com/Oryzone/eTruncate/raw/master/src/jquery.eTruncate.js"></script>
+---
+layout: layout
+title: Demos
+---
 <script type="text/javascript">
 	jQuery(function($){
 		//hides all the paragraphs tagged with the class more within the div#content, also uses "Read more..." as text for the button
 		$("#content").eTruncate({"showText" : "Read more..."});
 	});
 </script>
-</head>
-<body>
-	<div id="header">
-		<span class="prev"><a href="demos.html">&lt; Back to the index</a></span>
-		<span class="title">jQuery eTruncate Demo #1</span>
-		<span class="next"><a href="demo2.html">Next Demo &gt;</a></span>
-		<div class="cleaner"></div>
-	</div>
+<div id="main" class="demos">
+	<div id="main_inner">
+	{% assign demoNumber = 1 %}
+	{% assign demoPrev = "demos.html" %}
+	{% assign demoNext = "demo2.html" %}
+	{% include demo_header.html %}
+	<article>
 	<div id="content">
 	<h1>Herman Melville - Moby Dick</h1>
 	<p>But being in a great hurry to resume scolding the man in the purple Shirt, who was waiting for it in the entry, and seeming to hear nothing but the word "clam," Mrs. Hussey hurried towards an open door leading to the kitchen, and bawling out "clam for two," disappeared.</p>
@@ -41,6 +36,7 @@
 	<p class="more">I have forgotten to mention that, in many things, Queequeg placed great confidence in the excellence of Yojo's judgment and surprising forecast of things; and cherished Yojo with considerable esteem, as a rather good sort of god, who perhaps meant well enough upon the whole, but in all cases did not succeed in his benevolent designs.</p>
 
 	<p class="more">Now, this plan of Queequeg's, or rather Yojo's, touching the selection of our craft; I did not like that plan at all. I had not a little relied upon Queequeg's sagacity to point out the whaler best fitted to carry us and our fortunes securely. But as all my remonstrances produced no effect upon Queequeg, I was obliged to acquiesce; and accordingly prepared to set about this business with a determined rushing sort of energy and vigor, that should quickly settle that trifling little affair. Next morning early, leaving Queequeg shut up with Yojo in our little bedroom&mdash;for it seemed that it was some sort of Lent or Ramadan, or day of fasting, humiliation, and prayer with Queequeg and Yojo that day; HOW it was I never could find out, for, though I applied myself to it several times, I never could master his liturgies and XXXIX Articles&mdash;leaving Queequeg, then, fasting on his tomahawk pipe, and Yojo warming himself at his sacrificial fire of shavings, I sallied out among the shipping. After much prolonged sauntering and many random inquiries, I learnt that there were three ships up for three-years' voyages&mdash;The Devil-dam, the Tit-bit, and the Pequod. DEVIL-DAM, I do not know the origin of; TIT-BIT is obvious; PEQUOD, you will no doubt remember, was the name of a celebrated tribe of Massachusetts Indians; now extinct as the ancient Medes. I peered and pryed about the Devil-dam; from her, hopped over to the Tit-bit; and finally, going on board the Pequod, looked around her for a moment, and then decided that this was the very ship for us.</p>
-</div>
-</body>
-</html>
+	</div>
+	</article>
+	</div>
+	</div>

@@ -1,17 +1,25 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml">
-<head>
-<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-<title>eTruncate demo 3</title>
-<link type="text/css" rel="stylesheet" href="css/style_demo.css"/>
+---
+layout: layout
+title: Demos
+---
 <style type="text/css">
-a img
-{
-	padding: 5px 5px 0 5px;
-}
+
+	.flickr_image
+	{
+		border: 1px solid #ccc;
+		display: inline-block;
+		height: 100px;
+		margin: 0 10px 10px 0;
+		overflow: hidden;
+		width: 100px;
+	}
+	
+	a.flickr_image:hover
+	{
+		border-color: #215E91;
+	}
+
 </style>
-<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.3/jquery.min.js"></script>
-<script type="text/javascript" src="https://github.com/Oryzone/eTruncate/raw/master/src/jquery.eTruncate.js"></script>
 <script type="text/javascript">
 	// Retrieves a series of images from flickr and appends them within the div#photoContainer then
 	// it truncates all the images from the fourth to the last.
@@ -21,29 +29,33 @@ a img
 					  		$("#photoContainer").html("");
 							$.each(data.items, function(i,item){
 					    		$("<img/>").attr("src", item.media.m).appendTo("#photoContainer")
-					      		.wrap("<a href='" + item.link + "'></a>");
+					      		.wrap("<a class=\"flickr_image\" href='" + item.link + "'></a>");
 					  		});
 
 							$("#photoContainer").eTruncate({
-								elements : "a:gt(4)"
+								elements : "a:gt(7)",
+								buttonContainer : "#buttonContainer"
 							});
 
 						});
 	});
 </script>
-</head>
-<body>
-	<div id="header">
-		<span class="prev"><a href="demo2.html">&lt; Previous demo</a></span>
-		<span class="title">jQuery eTruncate Demo #3</span>
-		<span class="next"><a href="demo4.html">Next Demo &gt;</a></span>
-		<div class="cleaner"></div>
-	</div>
+<div id="main" class="demos">
+	<div id="main_inner">
+	
+		{% assign demoNumber = 3 %}
+		{% assign demoPrev = "demo2.html" %}
+		{% assign demoNext = "demo4.html" %}
+		{% include demo_header.html %}
+	
+	<article>
 	<div id="content">
-	<h1><a href="http://www.flickr.com/photos/oryzone/">ORYZONE photostream</a></h1>
+	<h1><a href="http://www.flickr.com/photos/oryzone/">ORYZONE flickr photostream</a></h1>
 <div id="photoContainer">
 	Loading stream...
 </div>
-	</div>
-</body>
-</html>
+<div id="buttonContainer"></div>
+</div>
+</article>
+</div>
+</div>
