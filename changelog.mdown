@@ -3,10 +3,13 @@ jQuery eTruncate changelog
 
 v 1.1 (in progress)
 -------------------
-
-  - *Features*:	
+  - *Features*:
+	- Added events ( [issue #1](https://github.com/Oryzone/eTruncate/issues#issue/1) )
 	- Add chainability to the eTruncate class public methods ( [issue #10](https://github.com/Oryzone/eTruncate/issues#issue/10) )
     - Added the ability to access to the eTruncate instance programmatically ( [issue #3](https://github.com/Oryzone/eTruncate/issues#issue/3) )
+  
+  - *Improvements*:
+    - Achieved JSLint validation ( [issue #11](https://github.com/Oryzone/eTruncate/issues#issue/11) )
 
 v 1.0
 -----
